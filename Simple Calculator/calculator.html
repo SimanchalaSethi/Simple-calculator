@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         div {
+        border: 2px solid black;
+        background-color: rgb(126, 176, 138);
+        background-color: rgba(216, 191, 216, 0.600);
+        border-radius: 9px;
+      
+        width: 30%;
+        height: 300px;
+   
+        padding: 50px;
+        margin: 200px auto;
+      }
+      input {
+        border-radius: 5px;
+        padding: 6px;
+        width: 200px;
+        
+      }
+      button{
+       
+         background-color: rgb(217, 236, 236);
+        
+      }
+      button:hover{
+         background-color: rebeccapurple;
+         color: white;
+      }
+      body{
+        background-color: rgb(29, 31, 30);
+      }
+     
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Calculator</h2>
+        <label for="">Number-1</label>
+        <input type="text" name="" id="input1">
+        <button onclick="add()">+</button>
+        <button onclick="sub()">-</button>
+        <br><br>
+        <label for="">Number-2</label>
+        <input type="text" name="" id="input2">
+        <button onclick="mul()">*</button>
+        <button onclick="div()">/</button>
+        <br><br>
+        <label for="">Result</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="" id="Result">
+        <button onclick="clr()">Clear</button>
+        <br><br>
+    </div>
+    <script>
+    function add(){
+        var x = document.getElementById("input1").value;
+        var y = document.getElementById("input2").value;
+        var add = parseFloat(x)+parseFloat(y);
+        document.getElementById("Result").value=add;
+    }
+    function sub(){
+        var x = document.getElementById("input1").value;
+        var y = document.getElementById("input2").value;
+        var sub = parseFloat(x)-parseFloat(y);
+        document.getElementById("Result").value=sub;
+    }
+    function mul(){
+        var x = document.getElementById("input1").value;
+        var y = document.getElementById("input2").value;
+        var mul = parseFloat(x)*parseFloat(y);
+        document.getElementById("Result").value=mul;
+    }
+    function div(){
+        var x = document.getElementById("input1").value;
+        var y = document.getElementById("input2").value;
+        var div = parseFloat(x)/parseFloat(y);
+        document.getElementById("Result").value=div;
+    }
+    function clr()
+    {
+        document.getElementById("input1").value=" "
+        document.getElementById("input2").value=" "
+        document.getElementById("Result").value=" "
+    }
+
+    </script>
+</body>
+</html>
